@@ -43,7 +43,14 @@ def drawData(data, colorArray):
 
 # generate array with random values
 def generate():
-    pass
+    global data
+
+    data = []
+    for i in range(0, 100):
+        random_value = random.randint(1, 150)
+        data.append(random_value)
+
+    drawData(data, [BLUE for x in range(len(data))])
 
 # set sorting speed
 def set_speed():
