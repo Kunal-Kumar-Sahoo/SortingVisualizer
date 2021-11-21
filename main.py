@@ -54,7 +54,12 @@ def generate():
 
 # set sorting speed
 def set_speed():
-    pass
+    if speed_menu.get() == 'Slow':
+        return 0.3
+    elif speed_menu.get() == 'Medium':
+        return 0.1
+    else:
+        return 0.01
 
 # trigger the selected algorithm and start sorting
 def sort():
