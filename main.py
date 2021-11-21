@@ -7,6 +7,9 @@ import random
 # Importing colors 
 from colors import *
 
+# Importing sorting algorithms
+from algorithms.bubbleSort import bubble_sort
+
 # Creating a basic window
 window = Tk()
 window.title("Sorting Algorithm Visualizer")
@@ -63,7 +66,11 @@ def set_speed():
 
 # trigger the selected algorithm and start sorting
 def sort():
-    pass
+    global data
+    timeTick = set_speed()
+
+    if algo_menu.get() == "Bubble Sort":
+        bubble_sort(data, drawData, timeTick)
 
 
 # UI here
