@@ -25,7 +25,21 @@ data = []
 
 # draw the data on the canvas
 def drawData(data, colorArray):
-    pass
+    canvas.delete("all")
+    canvas_width, canvas_height = 800, 400
+    x_width = canvas_width / (len(data) + 1)
+    offset = 4
+    spacing = 2
+    normalizedData = [i / max(data) for i in data]
+
+    for i, height in enumerate(normalizedData):
+        x0 = i * x_width + offset + spacing
+        y0 = canvas_height - height * 390
+        x1 = (i + 1) * x_width + offset
+        y1 = canvas_height
+        canvas.create_rectangle(x0, y0, x1, y1, fill=colorArray[i])
+
+    window.update_idletasks()
 
 # generate array with random values
 def generate():
