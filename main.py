@@ -93,7 +93,7 @@ speed_menu.current(0)
 
 # sort button
 b1 = Button(UI_frame, text="Sort", command=sort, bg=LIGHT_GRAY)
-b1.grid(row=2, column=1, padx=5, pady=5)
+b1.grid(row=2, column=0, padx=5, pady=5)
 
 # button for generating array
 b3 = Button(UI_frame, text="Generate Array", command=generate, bg=LIGHT_GRAY)
