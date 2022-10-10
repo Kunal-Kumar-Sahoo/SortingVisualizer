@@ -1,6 +1,6 @@
 import time # Create some time difference between each comparison
 
-from src.colors import *
+from colors import *
 
 def bubble_sort(data, drawData, timeTick):
     size = len(data)
