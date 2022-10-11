@@ -7,7 +7,10 @@ def inputDialog(data, msg=None):
     try:
         if(tempData != None):
             for i in tempData.strip().split(","):
-                data.append(int(i.strip()))
+                number = int(i.strip())
+                if(number < 0):
+                    raise
+                data.append(number)
             return True
     except Exception as e:
         return inputDialog(data, msg="Invalid input. Only positive numbers allowed")
