@@ -110,4 +110,5 @@ canvas.grid(row=1, column=0, padx=10, pady=5)
 
 Button(UI_frame, text="Enter numbers", command=lambda: inputDialog(data) and drawData(data, [BLUE for x in range(len(data))]), bg=LIGHT_GRAY).grid(row=2, column=2, padx=5, pady=5)
 
+window.bind("q",lambda e: window.destroy())
 window.mainloop()
