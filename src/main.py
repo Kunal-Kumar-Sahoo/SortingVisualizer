@@ -1,3 +1,4 @@
+from pydoc import Helper
 from tkinter import *
 from tkinter import ttk
 
@@ -9,6 +10,9 @@ from colors import *
 
 # Importing sorting algorithms
 from algorithms.bubbleSort import bubble_sort
+
+# Import UserInput Dialog Helper
+from utils.UserInput import inputDialog
 
 # Creating a basic window
 window = Tk()
@@ -28,6 +32,7 @@ data = []
 
 # draw the data on the canvas
 def drawData(data, colorArray):
+    print("Drawing")
     canvas.delete("all")
     canvas_width, canvas_height = 800, 400
     x_width = canvas_width / (len(data) + 1)
@@ -103,5 +108,7 @@ b3.grid(row=2, column=1, padx=5, pady=5)
 canvas = Canvas(window, width=800, height=400, bg=WHITE)
 canvas.grid(row=1, column=0, padx=10, pady=5)
 
+Button(UI_frame, text="Enter numbers", command=lambda: inputDialog(data) and drawData(data, [BLUE for x in range(len(data))]), bg=LIGHT_GRAY).grid(row=2, column=2, padx=5, pady=5)
 
+window.bind("q",lambda e: window.destroy())
 window.mainloop()
