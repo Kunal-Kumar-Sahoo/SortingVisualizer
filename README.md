@@ -1,8 +1,8 @@
 # SORTING-VISUALIZER
 
 ## Introduction
-The project **Sorting-Visualizer** aims to build a fully-functional visualizing tool for algorithms developed natively for Python programming <br>
-using Python3 programming language. An
+The **Sorting-Visualizer** project aims to build a fully-functional visualizing tool for algorithms developed natively for Python programming, <br> 
+using Python3 programming language.
 
 ## Features
 As of now, the project has following functionalities:
